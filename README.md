@@ -24,7 +24,7 @@ $ npm install bialu-discord-security
 
   * Fast reaction time
   * Great for all types of projects (small, medium, large)
-  * Lightweight (960 B)
+  * Ultra lightweight security solution
 
 ### Security Issues
 
