@@ -40,4 +40,4 @@ Todo
 
 ## Contributing
 
-[Contributing Guide](Contributing.md)
+[Contributing Guide](https://github.com/Bialu-Software/Discord-Security/blob/main/CONTRIBUTING.md)
