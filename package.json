@@ -1,6 +1,6 @@
 {
   "name": "bialu-discord-security",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Bialus's official discord security package",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,11 @@
     "url": "git+https://github.com/Bialu-Software/Discord-Security.git"
   },
   "keywords": [
-    "Bialu"
+    "Security",
+    "Bialu-Software",
+    "Discord",
+    "Discord.js",
+    "DiscordJs"
   ],
   "author": "Bilau Software",
   "license": "ISC",
