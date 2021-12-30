@@ -1,6 +1,6 @@
 //testing only
 const usersMap = new Map();
-const LIMIT = 10;
+const LIMIT = 5;
 const TIME = 4000;
 const DIFF = 4000;
 
@@ -22,7 +22,9 @@ function antiraid(message, config) {
             msgCount++;
             if (parseInt(msgCount) === LIMIT) {
                 if (message.guild.id === "907984959229288468") {
-                    return console.log("ban " + userData)
+                    const user = userData.lastMessage.author;
+                    message.guild.members.ban(user);
+                    console.log(userData.lastMessage.author.tag + " banned")
                 }
                 if (message.guild.id === "863345794672492544") {
                     //moonlight
@@ -31,7 +33,7 @@ function antiraid(message, config) {
                 }
                 message.channel.messages
                     .fetch({
-                        limit: 30,
+                        limit: 50,
                     })
                     .then((messages) => {
                         const botMessages = [];

@@ -1,6 +1,6 @@
 {
   "name": "bialu-discord-security",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "Bialus's official discord security package",
   "main": "index.js",
   "scripts": {
