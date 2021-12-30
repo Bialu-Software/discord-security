@@ -9,8 +9,10 @@
 const security = require("bialu-discord-security")
 
 const security_config = {
-log_channel: "123456789",
-permaban: true
+active: true,
+permaban: true,
+ping: false,
+log_channel: "123456789"
 }
 
 security.antiraid(message, security_config)
