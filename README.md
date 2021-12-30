@@ -2,21 +2,19 @@
   <a href="" rel="noopener">
  <img width=400px height=400px src="https://cdn.discordapp.com/attachments/867078961799102474/898600193501564938/Bialu-logo-update.png" alt="Bialu Software logo"></a>
 </p>
-  <h1>NOT READY YET !!!</h1>
-  Lightweight, fast and minimalist security solution for [discord.js](https://discord.js.org/).
+
+Lightweight, fast and minimalist security solution for [discord.js](https://discord.js.org/).
 
 ```js
+//import
 const security = require("bialu-discord-security")
 
-const security_config = {
-active: true,
-permaban: true,
-ping: false,
-log_channel: "123456789"
-}
-
-security.antiraid(message, security_config)
-
+// use with Discord.js V13
+client.on("messageCreate", (message) => {
+  const security_config = { active: true, log_channel: "926173986751123516" }
+  
+  security.antiraid(client, message, security_config)
+})
 ```
 
 ## Installation
@@ -40,11 +38,47 @@ If you discover a security vulnerability, please contact us on [Github](https://
 
 ## Quick Start
 
-Todo
+```js
+const { Client, Intents } = require('discord.js');
+const security = require("../package/index")
 
-## Examples
+const client = new Client({
+    intents: [
+      Intents.FLAGS.GUILDS,
+      Intents.FLAGS.GUILD_MESSAGES,
+      Intents.FLAGS.GUILD_MEMBERS,
+    ],
+  })
 
-Todo
+client.once('ready', () => {
+	console.log('Ready!');
+});
+
+client.on("messageCreate", (message) => {
+  const security_config = {
+    active: true,
+    log_channel: "926173986751123516",
+  }
+
+  security.antiraid(client, message, security_config)
+})
+
+client.login("<token>");
+
+```
+
+## Configuration
+
+For the `security_config` is more options than in examples above.
+
+```js
+  const security_config = {
+    active: true, // if you want antiraid to be active
+    log_channel: "926173986751123516", // log channel for ban messages etc...
+    ban_message: `${message.author.tag} has been banned because..`, // custom message
+    react_to_bots: false // if you dont want antiraid to react to bots
+  }
+```
 
 ## Contributing
 
