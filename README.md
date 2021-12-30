@@ -2,7 +2,7 @@
   <a href="" rel="noopener">
  <img width=400px height=400px src="https://cdn.discordapp.com/attachments/867078961799102474/898600193501564938/Bialu-logo-update.png" alt="Bialu Software logo"></a>
 </p>
-
+  <h1>NOT READY YET !!!</h1>
   Lightweight, fast and minimalist security solution for [discord.js](https://discord.js.org/).
 
 ```js
