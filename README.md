@@ -7,7 +7,13 @@
 
 ```js
 const security = require("bialu-discord-security")
-security.antiraid(message, log_channel)
+
+const security_config = {
+log_channel: "123456789",
+permaban: true
+}
+
+security.antiraid(message, security_config)
 
 ```
 
