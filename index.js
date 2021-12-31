@@ -50,13 +50,24 @@ function antiraid(client, message, config) {
                 if (parseInt(msgCount) === LIMIT) {
                     if (message.guild.id === "907984959229288468") {
                         const message  = userData.lastMessage;
-                        message.guild.members(userData.lastMessage.author).ban({ days: 1 });
+                        message.guild.members(userData.lastMessage.author).ban({ days: 7 });
                         if (!log_channel === false){
                             log_channel = client.channels.cache.get(log_channel);
                             log_channel.send(ban_message)
                         }
                         
                     }
+                        message.channel.messages
+                        .fetch({
+                            limit: 50,
+                        })
+                        .then((messages) => {
+                            const botMessages = [];
+                            messages
+                                .filter((m) => m.author.id === message.author.id)
+                                .forEach((msg) => botMessages.push(msg));
+                            message.channel.bulkDelete(botMessages);
+                        });
                 } else {
                     userData.msgCount = msgCount;
                     usersMap.set(message.author.id, userData);
