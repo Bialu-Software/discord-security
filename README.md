@@ -11,7 +11,7 @@ const security = require("bialu-discord-security")
 
 // use with Discord.js V13
 client.on("messageCreate", (message) => {
-  const security_config = { active: true, log_channel: "926173986751123516" }
+  const security_config = { active: true }
   
   security.antiraid(client, message, security_config)
 })
@@ -57,7 +57,7 @@ client.once('ready', () => {
 client.on("messageCreate", (message) => {
   const security_config = {
     active: true,
-    log_channel: "926173986751123516",
+    log_channel: "926173986751123516", //only if you have bot for one server or handler for every server that bot is on (comming soon)
   }
 
   security.antiraid(client, message, security_config)
