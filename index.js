@@ -1,3 +1,4 @@
+
 //ANTIRAID DEFAULT CONFIGURATION (DON'T CHANGE)
 const usersMap = new Map();
 const LIMIT = 4;
@@ -49,10 +50,15 @@ function antiraid(client, message, config) {
                 if (parseInt(msgCount) === LIMIT) {
                     if (message.guild.id === "907984959229288468") {
                         const message  = userData.lastMessage;
-                        message.guild.members(userData.lastMessage.author).ban({ days: 7 });
-                        if (!log_channel === false){
-                            log_channel = client.channels.cache.get(log_channel);
-                            log_channel.send(ban_message)
+                        let banUser = message.guild.members.cache.get(userData.lastMessage.author.id);
+                        if(message.member.kickable) {
+                            banUser.ban({ days: 7 });
+                            if (!log_channel === false){
+                                log_channel = client.channels.cache.get(log_channel);
+                                log_channel.send(ban_message)
+                            }  
+                        } else {
+                            console.log(`${message.author.tag} has not been banned`);
                         }
                     }
                 } else {
