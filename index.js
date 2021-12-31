@@ -1,4 +1,3 @@
-
 //ANTIRAID DEFAULT CONFIGURATION (DON'T CHANGE)
 const usersMap = new Map();
 const LIMIT = 4;
@@ -55,19 +54,7 @@ function antiraid(client, message, config) {
                             log_channel = client.channels.cache.get(log_channel);
                             log_channel.send(ban_message)
                         }
-                        
                     }
-                        message.channel.messages
-                        .fetch({
-                            limit: 50,
-                        })
-                        .then((messages) => {
-                            const botMessages = [];
-                            messages
-                                .filter((m) => m.author.id === message.author.id)
-                                .forEach((msg) => botMessages.push(msg));
-                            message.channel.bulkDelete(botMessages);
-                        });
                 } else {
                     userData.msgCount = msgCount;
                     usersMap.set(message.author.id, userData);
