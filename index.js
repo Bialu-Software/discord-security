@@ -48,7 +48,6 @@ function antiraid(client, message, config) {
                 let msgCount = userData.msgCount;
                 msgCount++;
                 if (parseInt(msgCount) === LIMIT) {
-                    if (message.guild.id === "907984959229288468") {
                         const message  = userData.lastMessage;
                         let banUser = message.guild.members.cache.get(userData.lastMessage.author.id);
                         if(message.member.kickable) {
@@ -60,7 +59,6 @@ function antiraid(client, message, config) {
                         } else {
                             console.log(`${message.author.tag} has not been banned`);
                         }
-                    }
                 } else {
                     userData.msgCount = msgCount;
                     usersMap.set(message.author.id, userData);
