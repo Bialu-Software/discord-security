@@ -78,6 +78,9 @@ function antiraid(client, message, config) {
 }
 }
 
+const version = require("./package.json").version
+
 module.exports = {
     antiraid,
+    version
 }
