@@ -78,6 +78,8 @@ For the `security_config` is more options than in examples above.
     ban_message: `${message.author.tag} has been banned because..`, // custom message
     react_to_bots: false // if you dont want antiraid to react to bots
   }
+  
+  console.log(security.version) // log your current version of package
 ```
 
 ## Contributing
