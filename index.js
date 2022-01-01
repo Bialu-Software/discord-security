@@ -1,4 +1,3 @@
-
 //ANTIRAID DEFAULT CONFIGURATION (DON'T CHANGE)
 const usersMap = new Map();
 const LIMIT = 4;
@@ -10,6 +9,7 @@ function antiraid(client, message, config) {
     // CONFIGURATION
     let log_channel = ""
     let ban_message = ``
+    let no_ban_minutes = 30
 
     if(message.author.bot){
         if(config.react_to_bots === false){
@@ -50,15 +50,26 @@ function antiraid(client, message, config) {
                 if (parseInt(msgCount) === LIMIT) {
                         const message  = userData.lastMessage;
                         let banUser = message.guild.members.cache.get(userData.lastMessage.author.id);
+
+                        const userJoinTimestamp = `${String(message.member.joinedTimestamp).substring(0, String(message.member.joinedTimestamp).length - 3)}`;
+                        const timestamp = Math.floor(Date.now() / 1000);
+                        const timeSecJoin = timestamp - userJoinTimestamp;
+                        const timeMinJoin = timeSecJoin / 60;
+
                         if(message.member.kickable) {
-                            banUser.ban({ days: 7 });
-                            if (!log_channel === false){
-                                log_channel = client.channels.cache.get(log_channel);
-                                log_channel.send(ban_message)
-                            }  
+                            if(timeMinJoin >= no_ban_minutes || userJoinTimestamp === "null") {
+                                console.log(`${message.author.tag} has been muted`);
+                            } else {
+                                banUser.ban({ days: 7 });
+                                if (!log_channel === false){
+                                    log_channel = client.channels.cache.get(log_channel);
+                                    log_channel.send(ban_message)
+                                }  
+                            }
                         } else {
-                            console.log(`${message.author.tag} has not been banned`);
+                            console.log(`${message.author.tag} has not been banned or muted`);
                         }
+
                 } else {
                     userData.msgCount = msgCount;
                     usersMap.set(message.author.id, userData);
