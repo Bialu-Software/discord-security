@@ -40,7 +40,7 @@ If you discover a security vulnerability, please contact us on [Github](https://
 
 ```js
 const { Client, Intents } = require('discord.js');
-const security = require("../package/index")
+const security = require("bialu-discord-security")
 
 const client = new Client({
     intents: [
