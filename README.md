@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=400px height=400px src="https://cdn.discordapp.com/attachments/867078961799102474/898600193501564938/Bialu-logo-update.png" alt="Bialu Software logo"></a>
+ <img width=400px height=400px src="https://cdn.discordapp.com/attachments/867078961799102474/952582198932951130/Bez_jmena.jpg" alt="Bialu Software logo"></a>
 </p>
 
 Lightweight, fast and minimalist security solution for [discord.js](https://discord.js.org/).
