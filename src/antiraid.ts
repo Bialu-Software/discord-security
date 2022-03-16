@@ -1,4 +1,4 @@
-export default function runAntiraid(client, message, usersMap, LIMIT, TIME, DIFF, log_channel, ban_message, no_ban_minutes) {
+export default function runAntiraid(client:any, message:any, usersMap:any, LIMIT:any, TIME:any, DIFF:any, log_channel:any, ban_message:any, no_ban_minutes:any) {
     if (usersMap.has(message.author.id)) {
         const userData = usersMap.get(message.author.id);
         const { lastMessage, timer } = userData;

@@ -1,7 +1,7 @@
 {
   "name": "bialu-discord-security",
-  "version": "1.3.3",
-  "description": "Bialus's official discord security package",
+  "version": "1.3.5",
+  "description": "Lightweight, simple and fast package with everything discord security related",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "files": [
@@ -30,5 +30,7 @@
   "homepage": "https://github.com/Bialu-Software/Discord-Security#readme",
   "devDependencies": {
     "@types/node": "^17.0.21"
+  },
+  "dependencies": {
   }
 }

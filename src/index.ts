@@ -6,9 +6,7 @@ const LIMIT = 4;
 const TIME = 4000;
 const DIFF = 5000;
 
-
-
-function antiraid(client, message, config) {
+function antiraid(client:any, message:any, config:any) {
     if(config.active === true || !config.active === false || !config.active){
     // CONFIGURATION
     let log_channel: any = ""
