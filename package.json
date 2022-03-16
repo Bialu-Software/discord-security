@@ -1,10 +1,15 @@
 {
   "name": "bialu-discord-security",
-  "version": "1.1.1",
+  "version": "1.3.2",
   "description": "Bialus's official discord security package",
-  "main": "index.js",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -22,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/Bialu-Software/Discord-Security/issues"
   },
-  "homepage": "https://github.com/Bialu-Software/Discord-Security#readme"
+  "homepage": "https://github.com/Bialu-Software/Discord-Security#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  }
 }

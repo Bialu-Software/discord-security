@@ -51,7 +51,7 @@ const client = new Client({
   })
 
 client.once('ready', () => {
-	console.log('Ready!');
+    console.log('Ready!');
 });
 
 client.on("messageCreate", (message) => {
