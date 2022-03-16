@@ -57,7 +57,6 @@ client.once('ready', () => {
 client.on("messageCreate", (message) => {
   const security_config = {
     active: true,
-    log_channel: "926173986751123516", //only if you have bot for one server or handler (comming soon)
   }
 
   security.antiraid(client, message, security_config)
