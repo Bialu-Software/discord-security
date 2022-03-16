@@ -9,7 +9,7 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "lib": ["ES2015", "DOM"],
-    "rootDir": "./"
+
 },
 "include": ["src"],
 "exclude": ["node_modules", "dist"]

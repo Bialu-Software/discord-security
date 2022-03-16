@@ -1,6 +1,6 @@
 {
   "name": "bialu-discord-security",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Bialus's official discord security package",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
