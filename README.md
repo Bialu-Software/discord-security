@@ -55,9 +55,7 @@ client.once('ready', () => {
 });
 
 client.on("messageCreate", (message) => {
-  const security_config = {
-    active: true,
-  }
+  const security_config = {}
 
   security.antiraid(client, message, security_config)
 })
@@ -72,7 +70,7 @@ For the `security_config` is more options than in examples above.
 
 ```js
   const security_config = {
-    active: true, // if you want antiraid to be active
+    active: false, // if you want antiraid to be turned off
     log_channel: "926173986751123516", // log channel for ban messages etc...
     ban_message: `${message.author.tag} has been banned because..`, // custom message
     react_to_bots: false // if you dont want antiraid to react to bots
