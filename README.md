@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/70224036/215817396-37933df2-cc38-4244-86ad-08d642fec330.png)
+![Color=Green](https://user-images.githubusercontent.com/70224036/229851422-02542171-4bb9-475c-bc78-cfd319ab783e.png)
 
 ## Lightweight, fast and minimalist security solution for [discord.js](https://discord.js.org/).
 
