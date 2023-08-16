@@ -79,3 +79,5 @@ For the `security_config` is more options than in examples above.
 ## Contributing
 
 [Contributing Guide](https://github.com/Bialu-Software/Discord-Security/blob/main/CONTRIBUTING.md)
+
+<a href="https://github.com/Bialu-Software/" ><img width="223" hspace="10" alt="Powered by Bialu Software" src="https://media.discordapp.net/attachments/1055532722304585765/1069690405425254420/blue-icon.png?width=602&height=80"> </a>
